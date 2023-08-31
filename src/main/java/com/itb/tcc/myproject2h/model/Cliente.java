@@ -7,22 +7,23 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="usuarios")
-public class Usuario {
+@Table(name="clientes")
+public class Cliente {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String cpf;
 	private String nome;
-	private String telefone;
-	private String email;
-	private String senha;
 	private String logradouro;
 	private String cep;
-	private String bairro;
 	private String uf;
-	private boolean codStatusUsuario;
+	private String cidade;
+	private String bairro;
+	private String email;
+	private String senha;
+	private String telefone;
+	private boolean codStatusCliente;
 	
 	
 	public Long getId() {
@@ -43,11 +44,35 @@ public class Usuario {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getTelefone() {
-		return telefone;
+	public String getLogradouro() {
+		return logradouro;
 	}
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
+	public void setLogradouro(String logradouro) {
+		this.logradouro = logradouro;
+	}
+	public String getCep() {
+		return cep;
+	}
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+	public String getUf() {
+		return uf;
+	}
+	public void setUf(String uf) {
+		this.uf = uf;
+	}
+	public String getCidade() {
+		return cidade;
+	}
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+	public String getBairro() {
+		return bairro;
+	}
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
 	}
 	public String getEmail() {
 		return email;
@@ -61,37 +86,15 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	public String getLogradouro() {
-		return logradouro;
+	public String getTelefone() {
+		return telefone;
 	}
-	public void setLogradouro(String logradouro) {
-		this.logradouro = logradouro;
-	}
-	public String getCep() {
-		return cep;
-	}
-	public void setCep(String cep) {
-		this.cep = cep;
-	}
-	public String getBairro() {
-		return bairro;
-	}
-	public void setBairro(String bairro) {
-		this.bairro = bairro;
-	}
-	public String getUf() {
-		return uf;
-	}
-	public void setUf(String uf) {
-		this.uf = uf;
-	}
-	public boolean getCodStatusUsuario() {
-		return codStatusUsuario;
-	}
-	public void setCodStatusUsuario(boolean codStatusUsuario) {
-		this.codStatusUsuario = codStatusUsuario;
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
 	}
 	
 	
 	
+	
+
 }
